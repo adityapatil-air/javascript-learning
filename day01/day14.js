@@ -1,4 +1,4 @@
-const myArr = [apple, banna,chikkiu,dragon,egg];
+const myArr = ["apple", "banna","chikkiu","dragon","egg"];
 
 const hero = ['nagraj', 'asgar', 'ram'];
 const myArr2=new Array(1,2,3,4)
@@ -32,3 +32,5 @@ console.log(new1);
 
 const new2=myArr.splice(1,3);
 console.log(new2);
+    
+
