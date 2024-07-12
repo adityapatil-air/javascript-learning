@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Example</title>
+    <style>
+        body {
+            background-color: #414144;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #start {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+        #stop {
+            background-color: #dc3545;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Async Example</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        let intervalId;
+
+        const sayDate = function() {
+            console.log("aditya", Date.now());
+        }
+
+        document.querySelector('#start').addEventListener('click', function(e) {
+            if (!intervalId) {
+                intervalId = setInterval(sayDate, 1000);
+            }
+        });
+
+        document.querySelector('#stop').addEventListener('click', function(e) {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;  
+            }
+        });
+    </script>
+</body>
+</html>
